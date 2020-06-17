@@ -4,10 +4,6 @@
  Author:	AC
 */
 
-// the setup function runs once when you press reset or power the board
-// To use VescUartControl stand alone you need to define a config.h file, that should contain the Serial or you have to comment the line
-// #include Config.h out in VescUart.h
-
 //Include libraries copied from VESC
  #include "VescUart.h"
 #include "datatypes.h"
@@ -28,16 +24,7 @@ void setup() {
 
 struct bldcMeasure measuredValues;
 	
-// the loop function runs over and over again until power down or reset
 void loop() {
-	//int len=0;
-	//len = ReceiveUartMessage(message);
-	//if (len > 0)
-	//{
-	//	len = PackSendPayload(message, len);
-	//	len = 0;
-	//}
-	
 	if (VescUartGetValue(measuredValues)) {
 		Serial.print("Loop: "); Serial.println(count++);
 		SerialPrint(measuredValues);
