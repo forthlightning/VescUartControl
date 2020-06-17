@@ -21,7 +21,7 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 
 
 // add your board here!
-
+#ifndef _CONFIG_h
 
 #ifdef __AVR_ATmega2560__
 #define SERIALIO Serial1

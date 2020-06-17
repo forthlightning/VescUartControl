@@ -34,7 +34,7 @@ int ReceiveUartMessage(uint8_t* payloadReceived, int num) {
 	uint8_t messageReceived[256];
 	int lenPayload = 0;
 	HardwareSerial *serial;
-	serial=&Serial;
+	serial=&Serial1;
 	#ifdef __AVR_ATmega2560__
 	switch (num) {
 		case 0:
