@@ -165,6 +165,7 @@ int PackSendPayload(uint8_t* payload, int lenPay, int num) {
 
 
 	HardwareSerial *serial;
+	serial = &Serial1;
 	#ifdef __AVR_ATmega2560__
 	switch (num) {
 		case 0:

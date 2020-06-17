@@ -34,6 +34,11 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #define SERIALIO Serial
 #define DEBUGSERIAL Serial
 #endif
+
+#ifdef ARDUINO_SAMD_ZERO
+#define SERIALIO Serial1
+#define DEBUGSERIAL Serial
+#endif
 #endif
 
 #if defined(ARDUINO) && ARDUINO >= 100
